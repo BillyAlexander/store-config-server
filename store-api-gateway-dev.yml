@@ -14,10 +14,3 @@ spring:
           uri: lb://store-user-service
           predicates:
             - Path=/store_user/**
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
