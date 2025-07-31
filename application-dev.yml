@@ -16,6 +16,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: 'http://${ead.serviceRegistre.userName}:${ead.serviceRegistre.password}@localhost:8761/eureka'
+      defaultZone: 'http://${store.serviceRegistre.userName}:${store.serviceRegistre.password}@localhost:8761/eureka'
   instance:
     hostname: localhost          
