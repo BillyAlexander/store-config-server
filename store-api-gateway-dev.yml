@@ -6,18 +6,11 @@ spring:
     name: store-api-gateway
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
+      # discovery:
+        # locator:
+          # enabled: true
       routes:
         - id: user_service
           uri: lb://store-user-service
           predicates:
-            - Path=/store_user/**
-            
-eureka:
-  client:
-    service-url:
-      defaultZone: 'http://${store.serviceRegistry.userName}:${store.serviceRegistry.password}@localhost:8761/eureka'
-  instance:
-    hostname: localhost                    
+            - Path=/store_user/**                          
