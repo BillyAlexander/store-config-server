@@ -5,14 +5,11 @@ spring:
   application:
     name: store-api-gateway
   cloud:
-    gateway:
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: true
-          routes:
-            - id: user_service
-              uri: lb://store-user-service
-              predicates:
-                - Path=/store_user/**                          
+    gateway:   
+      # server:
+        # webflux:          
+      routes:
+        - id: user_service
+          uri: lb://store-user-service
+          predicates:
+            - Path=/store_user/**                          
