@@ -1,11 +1,25 @@
+# server:
+  # port: 8761
+
+# spring:
+  # application:
+    # name: store-service-registry
+
+# eureka:
+  # client:
+    # register-with-eureka: false
+    # fetch-registry: false
+
 server:
   port: 8761
 
 spring:
   application:
-    name: store-service-registry
+    name: store_service_registry
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+  instance:
+    hostname: localhost
