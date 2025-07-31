@@ -15,7 +15,7 @@ server:
 
 spring:
   application:
-    name: store_service_registry
+    name: store-service-registry
 
 eureka:
   client:
