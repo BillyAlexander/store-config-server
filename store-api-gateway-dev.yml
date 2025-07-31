@@ -6,10 +6,10 @@ spring:
     name: store-api-gateway
   cloud:
     gateway:   
-      # server:
-        # webflux:          
-      routes:
-        - id: user_service
-          uri: lb://store-user-service
-          predicates:
-            - Path=/store_user/**                          
+      server:
+        webflux:          
+          routes:
+            - id: user_service
+              uri: lb://store-user-service
+              predicates:
+                - Path=/store_user/**                          
