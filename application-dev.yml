@@ -1,12 +1,4 @@
-server:
-  port: 8888
 
-spring:
-  application:
-    name: store-config-server
-    
-    
-    
 store:
   serviceRegistry:
     userName: serviceRegistry
@@ -14,10 +6,4 @@ store:
   auth:
     jwtSecret: a3a6b9ac04baeec1ae14bf264753d0ab1141ca0519bd5ff696a8fcd50c6ff9d2bb9d8ce7b53e6141091fb66f0076f86b9a6d8512d6edbd8f29305ca09f53d2a3
     jwtExpirationMs: 14400000
-
-eureka:
-  client:
-    service-url:
-      defaultZone: 'http://${store.serviceRegistry.userName}:${store.serviceRegistry.password}@localhost:8761/eureka'
-  instance:
-    hostname: localhost        
+      
